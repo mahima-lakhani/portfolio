@@ -14,9 +14,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    padding: 40px;
     background-color: #202020;
     gap: 20px;
+    padding: 60px 20px;
 }
 
 .header-left {
