@@ -102,9 +102,7 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #303030;
-    border-radius: 5px;
-    padding: 5px 10px;
+    color: #303030;
 }
 
 
