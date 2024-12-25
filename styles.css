@@ -45,9 +45,7 @@ body {
     font-weight: 700;
     font-size: 2.5em;
 }
-h3{
-    font-family: 'Fira Code', monospace;
-}
+
 /* Section Styles */
 .section {
     padding: 40px 20px;
@@ -86,7 +84,7 @@ h3{
     padding: 20px;
     border-radius: 8px;
     width: 25%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fira Code', monospace;
 }
 
 /* Articles Styles */
