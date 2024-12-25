@@ -21,6 +21,7 @@ body {
 
 .header-left {
     text-align: left;
+    padding: 20px;
 }
 
 .header-left h1 {
@@ -42,6 +43,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .header-right img {
