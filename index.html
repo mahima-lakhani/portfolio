@@ -1,7 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#work">Work</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <h1>Full-stack Developer</h1>
+            <p>Creating minimalistic, clean, and functional websites for modern users.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="projects" class="section projects">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project Title</h3>
+                    <p>Project description goes here.</p>
+                </div>
+                <div class="project-card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project Title</h3>
+                    <p>Project description goes here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a full-stack developer with over 5 years of experience. I specialize in creating seamless frontend and backend solutions.</p>
+            <div class="skills">
+                <div>
+                    <h3>Frontend</h3>
+                    <p>React, Vue, CSS, HTML</p>
+                </div>
+                <div>
+                    <h3>Backend</h3>
+                    <p>Node.js, Python, Java</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="articles" class="section articles">
+            <h2>Articles</h2>
+            <div class="article-list">
+                <div class="article">
+                    <h3>Article Title</h3>
+                    <p>A brief description of the article.</p>
+                </div>
+                <div class="article">
+                    <h3>Article Title</h3>
+                    <p>A brief description of the article.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section work">
+            <h2>Work</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Role</th>
+                        <th>Company</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021-2022</td>
+                        <td>Frontend Developer</td>
+                        <td>XYZ Labs</td>
+                    </tr>
+                    <tr>
+                        <td>2022-Present</td>
+                        <td>Fullstack Developer</td>
+                        <td>ABC Corp</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Full-stack Developer Portfolio</p>
+    </footer>
 </body>
 </html>
