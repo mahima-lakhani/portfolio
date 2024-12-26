@@ -10,62 +10,24 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Header Grid Alignment */
+/* Header Styles */
 .header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    padding: 60px 40px;
-    gap: 40px;
-    background: linear-gradient(to bottom, #202020, #121212);
-}
-
-/* Header Text Area */
-.header-left {
-    max-width: 600px;
-}
-.header-left h1 {
-    font-family: 'Fira Code', monospace;
-    font-weight: 700;
-    font-size: 3em;
-    margin: 0;
-    color: #F5F5F5;
-    animation: slideInLeft 1s ease-out;
-}
-
-.header-left p {
-    font-size: 1.2em;
-    color: #A6A6A6;
-    margin-top: 10px;
-}
-
-.header-right {
-    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-}
-
-/* Image Adjustments */
-.header-right img {
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 50%;
-    border: 3px solid #505050;
+    padding: 40px;
+    background-color: #202020;
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 20px 0;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
     background-color: #121212;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 10px 40px;
-    background: linear-gradient(to right, #202020, #121212);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar a {
@@ -79,6 +41,42 @@ body {
 
 .navbar a:hover {
     color: #F5F5F5;
+    background-color: #303030;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.header-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-content h1 {
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 3em;
+    margin: 0;
+    color: #F5F5F5;
+    animation: slideInLeft 1s ease-out;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    color: #A6A6A6;
+    margin-top: 10px;
+}
+
+.header-image {
+    margin-top: 20px;
+}
+
+.header-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #303030;
+    animation: fadeIn 1.5s ease-in;
 }
 
 /* Dynamic Vertical Navigation Menu */
@@ -278,6 +276,7 @@ body {
         opacity: 1;
     }
 }
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .header {
