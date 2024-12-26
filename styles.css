@@ -526,6 +526,29 @@ body {
     .navbar {
         display: none; /* Hide default navbar on smaller screens */
     }
+    .dotted-circle:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        animation-duration: 60s;
+        top:10%;
+        right: -10%;
+    }
+    
+    .dotted-circle:nth-child(2) {
+        width: 250px;
+        height: 250px;
+        animation-duration: 80s;
+        animation-direction: reverse;
+        top:50%;
+        left: -30%;
+    }
+    
+    .dotted-circle:nth-child(3) {
+        width: 300px;
+        height: 300px;
+        animation-duration: 100s;
+        top:90%;
+        right: -20%;
 }
 
 @media (max-width: 480px) {
