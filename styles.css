@@ -89,6 +89,7 @@ body {
     top: 15px;
     left: 15px;
     font-size: 1.8em;
+    width: 16px;
     color: #F5F5F5;
     z-index: 1001;
     cursor: pointer;
@@ -213,6 +214,7 @@ body {
 }
 .skill-collection2{
     display: flex;
+    gap:16px;
 }
 .skill-img{
     display: flex;
