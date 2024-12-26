@@ -211,20 +211,26 @@ body {
     color: #F5F5F5;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
-.skills div i {
+.skill-collection{
+    display: flex;
+}
+.skill-img{
+    display: flex;
+    flex-direction: column;
+}
+.skill-img i {
     font-size: 2.5em;
     color: #FFD700;
     margin-bottom: 10px;
     transition: color 0.3s, transform 0.3s;
 }
 
-.skills div i:hover {
+.skill-img i:hover {
     color: #A6A6A6;
     transform: scale(1.2);
 }
 
-.skills div p {
+.skill-img p {
     margin: 0;
     font-size: 1em;
 }
