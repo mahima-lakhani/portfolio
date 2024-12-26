@@ -54,6 +54,7 @@ body {
     max-height: 250px;
     border-radius: 50%;
     border: 3px solid #505050;
+    aspect-ratio: 1;
 }
 
 .navbar {
