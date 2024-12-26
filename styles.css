@@ -139,35 +139,6 @@ body {
     transform: scale(1.1);
     color: #FFF;
 }
-/* /* Dynamic Vertical Navigation Menu 
-.vertical-menu {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #202020;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.vertical-menu a {
-    display: block;
-    text-decoration: none;
-    color: #A6A6A6;
-    padding: 10px;
-    font-family: 'Fira Code', monospace;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    text-align: center;
-}
-
-.vertical-menu a:hover {
-    background-color: #505050;
-    color: #FFD700;
-    transform: scale(1.1);
-}
- */
 /* Section Styles */
 .section {
     padding: 60px 20px;
