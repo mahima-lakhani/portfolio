@@ -449,8 +449,15 @@ body {
         margin-top: 20px;
     }
 
-    .navbar {
+    /* .navbar {
         padding: 10px 20px;
+    } */
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none; /* Hide default navbar on smaller screens */
     }
 }
 
@@ -480,12 +487,3 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .mobile-menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        display: none; /* Hide default navbar on smaller screens */
-    }
-}
