@@ -312,7 +312,7 @@ body {
     height: 500px;
     animation-duration: 80s;
     animation-direction: reverse;
-    top:40%;
+    top:90%;
     left: -30%;
 }
 
@@ -320,8 +320,8 @@ body {
     width: 600px;
     height: 600px;
     animation-duration: 100s;
-    top:90%;
-    right: -70%;
+    bottom:10%;
+    right: -20%;
 }
 
 /* Keyframes for Rotation */
