@@ -283,7 +283,7 @@ body {
 .circle-bg {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,7 +293,7 @@ body {
 
 .dotted-circle {
     position: absolute;
-    border: 2px dashed #00ADB5;
+    border: 2px dashed #FFD700;
     border-radius: 50%;
     animation: rotateCircle 5s linear infinite;
     opacity: 0.5;
@@ -406,7 +406,7 @@ body {
 }
 
 .footer .social-icons a:hover {
-    color: #00ADB5;
+    color: #FFD700;
     transform: scale(1.2);
 }
 
