@@ -281,7 +281,69 @@ body {
     }
 }
 /* Responsive Adjustments */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+    }
+
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    .header-content p {
+        font-size: 1em;
+    }
+
+    .header-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .projects .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .articles .article-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .vertical-menu {
+        display: none;
+    }
+
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    .header-content p {
+        font-size: 0.9em;
+    }
+
+    .header-image img {
+        width: 150px;
+        height: 150px;
+    }
     .header {
         grid-template-columns: 1fr;
         text-align: center;
@@ -293,5 +355,31 @@ body {
 
     .navbar {
         padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header-content h1 {
+        font-size: 1.5em;
+    }
+
+    .header-content p {
+        font-size: 0.8em;
+    }
+
+    .section h2 {
+        font-size: 1.8em;
+    }
+
+    .project-card h3 {
+        font-size: 1.2em;
+    }
+
+    .footer {
+        font-size: 0.8em;
     }
 }
