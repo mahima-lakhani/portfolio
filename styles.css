@@ -310,15 +310,41 @@ body {
 /* Footer */
 .footer {
     background-color: #202020;
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
     font-family: 'Open Sans', sans-serif;
+    color: #A6A6A6;
+}
+
+.footer .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer .social-icons a {
+    color: #A6A6A6;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #FFD700;
+    transform: scale(1.2);
 }
 
 .footer a {
-    display: inline-block;
-    margin: 0 10px;
+    text-decoration: none;
     color: #A6A6A6;
     transition: color 0.3s, transform 0.3s;
 }
@@ -327,7 +353,20 @@ body {
     color: #FFD700;
     transform: translateY(-3px);
 }
+.footer-section h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.3em;
+    color: #F5F5F5;
+}
 
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
 @keyframes slideInLeft {
     from {
         transform: translateX(-100%);
