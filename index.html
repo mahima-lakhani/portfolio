@@ -221,27 +221,29 @@ videoPopup.addEventListener('click', (e) => {
         popupVideo.currentTime = 0;
     }
 });
+
+
 const mobileMenuIcon = document.getElementById('mobileMenuIcon');
 const popupMenu = document.getElementById('popupMenu');
 const closePopup = document.getElementById('closePopup');
-
+console.log('1');
 // Show popup menu
 mobileMenuIcon.addEventListener('click', () => {
     popupMenu.style.display = 'flex';
-    alert("1");
+    console.log('2');
 });
 
 // Hide popup menu
 closePopup.addEventListener('click', () => {
     popupMenu.style.display = 'none';
-    alert("2");
+    console.log('3');
 });
 
 // Close popup menu when clicking outside the navigation links
 popupMenu.addEventListener('click', (e) => {
     if (e.target === popupMenu) {
         popupMenu.style.display = 'none';
-        alert("3");
+        console.log('4');
     }
 });
     </script>
