@@ -168,7 +168,7 @@
         </section>
         <div class="video-popup" id="videoPopup" style="display: none;">
             <div class="video-popup-content">
-                <span class="close-popup" id="closePopup">&times;</span>
+                <span class="close-popup" id="closePopupVid">&times;</span>
                 <video controls id="popupVideo">
                     <source src="DemoAccFirm.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -195,7 +195,7 @@
         // Get elements
 const projectCards = document.querySelectorAll('.project-card img');
 const videoPopup = document.getElementById('videoPopup');
-const closePopup = document.getElementById('closePopup');
+const closePopupVie = document.getElementById('closePopupVid');
 const popupVideo = document.getElementById('popupVideo');
 
 // Add event listener to project images
@@ -207,7 +207,7 @@ projectCards.forEach(card => {
 });
 
 // Close the popup
-closePopup.addEventListener('click', () => {
+closePopupVid.addEventListener('click', () => {
     videoPopup.style.display = 'none';
     popupVideo.pause(); // Pause the video when popup is closed
     popupVideo.currentTime = 0; // Reset video playback
@@ -228,17 +228,20 @@ const closePopup = document.getElementById('closePopup');
 // Show popup menu
 mobileMenuIcon.addEventListener('click', () => {
     popupMenu.style.display = 'flex';
+    alert("1");
 });
 
 // Hide popup menu
 closePopup.addEventListener('click', () => {
     popupMenu.style.display = 'none';
+    alert("2");
 });
 
 // Close popup menu when clicking outside the navigation links
 popupMenu.addEventListener('click', (e) => {
     if (e.target === popupMenu) {
         popupMenu.style.display = 'none';
+        alert("3");
     }
 });
     </script>
