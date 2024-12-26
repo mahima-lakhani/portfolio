@@ -84,7 +84,62 @@ body {
     color: #F5F5F5;
 }
 
-/* Dynamic Vertical Navigation Menu */
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+    display: none; /* Hidden on larger screens */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.8em;
+    color: #F5F5F5;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+/* Popup Menu */
+.popup-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-menu .close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.popup-menu .popup-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.popup-menu .popup-nav a {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5em;
+    color: #FFD700;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.popup-menu .popup-nav a:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+/* /* Dynamic Vertical Navigation Menu */
 .vertical-menu {
     position: fixed;
     right: 20px;
@@ -112,7 +167,7 @@ body {
     color: #FFD700;
     transform: scale(1.1);
 }
-
+ */
 /* Section Styles */
 .section {
     padding: 60px 20px;
@@ -422,5 +477,15 @@ body {
 
     .footer {
         font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none; /* Hide default navbar on smaller screens */
     }
 }
