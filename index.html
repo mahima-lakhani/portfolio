@@ -120,10 +120,51 @@
                 </div>
             </div>
         </section>
+        <div class="video-popup" id="videoPopup">
+            <div class="video-popup-content">
+                <span class="close-popup" id="closePopup">&times;</span>
+                <video controls id="popupVideo">
+                    <source src="your-video-file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>        
     </main>
 
     <footer class="footer">
         <p>&copy; 2024 Full-stack Developer Portfolio</p>
     </footer>
+    <script type="Javascript">
+        // Get elements
+const projectCards = document.querySelectorAll('.project-card img');
+const videoPopup = document.getElementById('videoPopup');
+const closePopup = document.getElementById('closePopup');
+const popupVideo = document.getElementById('popupVideo');
+
+// Add event listener to project images
+projectCards.forEach(card => {
+    card.addEventListener('click', () => {
+        videoPopup.style.display = 'flex';
+        popupVideo.play(); // Play the video when popup is displayed
+    });
+});
+
+// Close the popup
+closePopup.addEventListener('click', () => {
+    videoPopup.style.display = 'none';
+    popupVideo.pause(); // Pause the video when popup is closed
+    popupVideo.currentTime = 0; // Reset video playback
+});
+
+// Close popup on outside click
+videoPopup.addEventListener('click', (e) => {
+    if (e.target === videoPopup) {
+        videoPopup.style.display = 'none';
+        popupVideo.pause();
+        popupVideo.currentTime = 0;
+    }
+});
+
+    </script>
 </body>
 </html>
