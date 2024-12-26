@@ -20,9 +20,9 @@
         <span class="close-popup" id="closePopup">&times;</span>
         <nav class="popup-nav">
             <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
         </nav>
     </div>
 
@@ -148,7 +148,18 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Full-stack Developer Portfolio</p>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>Email: mahima.lakhani@gmail.com</li>
+                <li>Phone: +91 9545768385</li>
+            </ul>
+        </div>
+        <div class="footer-section social-icons">
+            <a href="#"><i class="icon-github"></i></a>
+            <a href="#"><i class="icon-linkedin"></i></a>
+            <a href="#"><i class="icon-instagram"></i></a>
+        </div>
     </footer>
     <script type="Javascript">
         // Get elements
@@ -180,7 +191,26 @@ videoPopup.addEventListener('click', (e) => {
         popupVideo.currentTime = 0;
     }
 });
+const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+const popupMenu = document.getElementById('popupMenu');
+const closePopup = document.getElementById('closePopup');
 
+// Show popup menu
+mobileMenuIcon.addEventListener('click', () => {
+    popupMenu.style.display = 'flex';
+});
+
+// Hide popup menu
+closePopup.addEventListener('click', () => {
+    popupMenu.style.display = 'none';
+});
+
+// Close popup menu when clicking outside the navigation links
+popupMenu.addEventListener('click', (e) => {
+    if (e.target === popupMenu) {
+        popupMenu.style.display = 'none';
+    }
+});
     </script>
 </body>
 </html>
