@@ -307,11 +307,11 @@ body {
 .video-popup-content {
     position: relative;
     background: #fff;
-    padding: 20px;
+    padding: 16px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%; /* Adjust this value for the width of the popup */
-    height: 80%; /* Adjust this value for the height of the popup */
+    width: 60%; /* Adjust this value for the width of the popup */
+    height: 40%; /* Adjust this value for the height of the popup */
     max-width: 1200px; /* Optional: Set a maximum width */
     max-height: 800px;
     overflow: hidden;
