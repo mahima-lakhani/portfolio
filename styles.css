@@ -315,10 +315,14 @@ body {
     overflow: hidden;
 }
 
-.video-popup-content video {
+.video-popup-content iframe {
     width: 100%;
     height: auto;
+    max-height: 80vh;
+    border-radius: 8px;
+    border: none;
 }
+
 
 .close-popup {
     position: absolute;
