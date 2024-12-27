@@ -199,22 +199,22 @@
             <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
-    <script type="Javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+
             const projectCards = document.querySelectorAll('.project-card img');
             const videoPopup = document.getElementById('videoPopup');
             const closePopupVid = document.getElementById('closePopupVid');
             const popupIframe = document.getElementById('popupIframe');
-        
+
             if (!projectCards.length || !videoPopup || !closePopupVid || !popupIframe) {
                 console.error('One or more required elements are missing');
                 return;
             }
-        
+
             // Video URL (You can update this to your actual video URL)
             const videoURL = "DemoAccFirm.mp4"; // Example YouTube video
-        
+
             // Add event listener to project images
             projectCards.forEach(card => {
                 card.addEventListener('click', () => {
@@ -223,14 +223,14 @@
                     videoPopup.style.display = 'flex';
                 });
             });
-        
+
             // Close the popup
             closePopupVid.addEventListener('click', () => {
                 console.log('Close button clicked');
                 videoPopup.style.display = 'none';
                 popupIframe.src = ""; // Clear the video source
             });
-        
+
             // Close popup on outside click
             videoPopup.addEventListener('click', (e) => {
                 if (e.target === videoPopup) {
@@ -239,30 +239,31 @@
                     popupIframe.src = ""; // Clear the video source
                 }
             });
+
+
+            const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+            const popupMenu = document.getElementById('popupMenu');
+            const closePopup = document.getElementById('closePopup');
+            console.log('1');
+            // Show popup menu
+            mobileMenuIcon.addEventListener('click', () => {
+                popupMenu.style.display = 'flex';
+            });
+
+            // Hide popup menu
+            closePopup.addEventListener('click', () => {
+                popupMenu.style.display = 'none';
+            });
+
+            // Close popup menu when clicking outside the navigation links
+            popupMenu.addEventListener('click', (e) => {
+                if (e.target === popupMenu) {
+                    popupMenu.style.display = 'none';
+                    console.log('4');
+                }
+            });
         });
 
-<!-- const mobileMenuIcon = document.getElementById('mobileMenuIcon');
-const popupMenu = document.getElementById('popupMenu');
-const closePopup = document.getElementById('closePopup');
-console.log('1');
-// Show popup menu
-mobileMenuIcon.addEventListener('click', () => {
-    popupMenu.style.display = 'flex';
-});
-
-// Hide popup menu
-closePopup.addEventListener('click', () => {
-    popupMenu.style.display = 'none';
-});
-
-// Close popup menu when clicking outside the navigation links
-popupMenu.addEventListener('click', (e) => {
-    if (e.target === popupMenu) {
-        popupMenu.style.display = 'none';
-        console.log('4');
-    }
-}); -->
-         
     </script>
 </body>
 
