@@ -170,13 +170,13 @@
                 </div>
             </div>
         </section>
-        <div class="video-popup" id="videoPopup" >
+        <div class="video-popup" id="videoPopup">
             <div class="video-popup-content">
                 <span class="close-popup" id="closePopupVid">&times;</span>
-                <video controls id="popupVideo">
-                    <source src="DemoAccFirm.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe id="popupIframe" width="560" height="315" src="DemoAccFirm.mp4" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
     </main>
@@ -202,35 +202,44 @@
     <script type="Javascript">
         document.addEventListener('DOMContentLoaded', function() {
             
-const projectCards = document.querySelectorAll('.project-card img');
-const videoPopup = document.getElementById('videoPopup');
-const closePopupVie = document.getElementById('closePopupVid');
-const popupVideo = document.getElementById('popupVideo');
-
-// Add event listener to project images
-projectCards.forEach(card => {
-    card.addEventListener('click', () => {
-        videoPopup.style.display = 'flex';
-        popupVideo.play(); // Play the video when popup is displayed
-    });
-});
-
-// Close the popup
-closePopupVid.addEventListener('click', () => {
-    videoPopup.style.display = 'none';
-    popupVideo.pause(); // Pause the video when popup is closed
-    popupVideo.currentTime = 0; // Reset video playback
-});
-
-// Close popup on outside click
-videoPopup.addEventListener('click', (e) => {
-    if (e.target === videoPopup) {
-        videoPopup.style.display = 'none';
-        popupVideo.pause();
-        popupVideo.currentTime = 0;
-    }
-});
-
+            const projectCards = document.querySelectorAll('.project-card img');
+            const videoPopup = document.getElementById('videoPopup');
+            const closePopupVid = document.getElementById('closePopupVid');
+            const popupIframe = document.getElementById('popupIframe');
+        
+            if (!projectCards.length || !videoPopup || !closePopupVid || !popupIframe) {
+                console.error('One or more required elements are missing');
+                return;
+            }
+        
+            // Video URL (You can update this to your actual video URL)
+            const videoURL = "DemoAccFirm.mp4"; // Example YouTube video
+        
+            // Add event listener to project images
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    console.log('Project card clicked');
+                    popupIframe.src = videoURL; // Set the video source
+                    videoPopup.style.display = 'flex';
+                });
+            });
+        
+            // Close the popup
+            closePopupVid.addEventListener('click', () => {
+                console.log('Close button clicked');
+                videoPopup.style.display = 'none';
+                popupIframe.src = ""; // Clear the video source
+            });
+        
+            // Close popup on outside click
+            videoPopup.addEventListener('click', (e) => {
+                if (e.target === videoPopup) {
+                    console.log('Outside of popup clicked');
+                    videoPopup.style.display = 'none';
+                    popupIframe.src = ""; // Clear the video source
+                }
+            });
+        });
 
 <!-- const mobileMenuIcon = document.getElementById('mobileMenuIcon');
 const popupMenu = document.getElementById('popupMenu');
@@ -253,7 +262,7 @@ popupMenu.addEventListener('click', (e) => {
         console.log('4');
     }
 }); -->
-          });
+         
     </script>
 </body>
 
